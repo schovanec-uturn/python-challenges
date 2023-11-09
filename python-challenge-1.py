@@ -21,14 +21,14 @@ linenum = [] # want this to be the list of the row # captured city is on out of 
 
 i = 0
 while True:
-    answer = input(str("what city? "))
-    if answer == "exit":
-        break
-    else:
+    try:
+        answer = input(str("what city? "))
         for cityname in cities:
             i += 1
             if cityname == answer:
-            # newlist.append(cityname)
                 linenum.append(i)
-    # citycount = len(newlist)
+            elif answer == "exit":
+                exit()
         print(answer, "is on lines", linenum)
+    except EOFError:
+        exit()
