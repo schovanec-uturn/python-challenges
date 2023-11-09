@@ -15,13 +15,19 @@ for row in csvreader:
 
 file.close()
 
-
-
-answer = input(str("what city? "))
     # newlist = [cityname for cityname in cities if answer == cityname]
-newlist = []
-for cityname in cities:
-    if cityname == answer:
-        newlist.append(cityname)
-citycount = len(newlist)
-print(citycount)
+newlist = [] # list of the input city amount
+linenum = [] # want this to be the list of the row # captured city is on out of the whole list
+
+i = 0
+while i <= len(newlist):
+    answer = input(str("what city? "))
+    for cityname in cities:
+        if cityname == answer:
+            newlist.append(cityname)
+            if
+            linenum.append(i)
+            i += 1
+    citycount = len(newlist)
+    print(citycount)
+    print(i)
