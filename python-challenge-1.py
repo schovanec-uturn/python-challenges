@@ -20,12 +20,15 @@ newlist = [] # list of the input city amount
 linenum = [] # want this to be the list of the row # captured city is on out of the whole list
 
 i = 0
-
-answer = input(str("what city? "))
-for cityname in cities:
-    i += 1
-    if cityname == answer:
-        # newlist.append(cityname)
-        linenum.append(i)
-# citycount = len(newlist)
-print(answer, "is on lines", linenum)
+while True:
+    answer = input(str("what city? "))
+    if answer == "exit":
+        break
+    else:
+        for cityname in cities:
+            i += 1
+            if cityname == answer:
+            # newlist.append(cityname)
+                linenum.append(i)
+    # citycount = len(newlist)
+        print(answer, "is on lines", linenum)
