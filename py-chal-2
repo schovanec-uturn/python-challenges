@@ -23,23 +23,23 @@ linenum = [] # want this to be the list of the row # captured city is on out of 
 newlist = list[str]
 
 def findcity():
+    i = 0
+    for cityname in cities:
+        cityname: str
+        i += 1
         if cityname == answer:
             linenum.append(i)
         elif answer == "exit":
             exit()
+    print(answer, "is on lines", linenum)
+
 
 i = 0
 while True:
     try:
         answer: str = input("what city? ")
-        for cityname in cities:
-            i += 1
-            findcity()
-        #     if cityname == answer:
-        #         linenum.append(i)
-        #     elif answer == "exit":
-        #         exit()
-
-        print(answer, "is on lines", linenum)
+        findcity()
     except EOFError:
         exit()
+
+# New York, Hamilton
