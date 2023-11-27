@@ -20,9 +20,13 @@ newlist = [] # list of the input city amount
 linenum = [] # want this to be the list of the row # captured city is on out of the whole list
 
 def main():
-    answer: str = input("what city? ")
-    findcity()
-    print(answer, "is on lines", linenum)
+    while True:
+        try:
+            answer: str = input("what city? ")
+            findcity()
+        except EOFError:
+            exit()
+        print(answer, "is on lines", linenum)
 
 
 def findcity():
@@ -36,12 +40,14 @@ def findcity():
             exit()
     # print(answer, "is on lines", linenum)
 
+main()
 
 # i = 0
-while True:
-    try:
-        main()
-    except EOFError:
-        exit()
+
+# while True:
+#     try:
+#         main()
+#     except EOFError:
+#         exit()
 
 # New York, Hamilton
